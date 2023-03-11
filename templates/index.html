@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Linkt</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body class="bg-gray-400">
+        <h1 class="text-5xl text-center font-bold mt-4">Linkt</h1>
+        <!-- Container for demo purpose -->
+<div class="container my-24 px-6 mx-auto">
+
+    <!-- Section: Design Block -->
+    <section class="mb-32 text-gray-800 text-center">
+      <div class="flex flex-wrap justify-center">
+        <div class="grow-0 shrink-0 flex-basis w-full lg:w-6/12 px-3">
+          <h2 class="text-3xl font-bold mb-6">Check URL Details</h2>
+  
+          <p class="text-gray-800 mb-12">
+            Enter any URL, short links such as tinyurl links, bit.ly links, any suspicious links recieved via email, SMS or social networks.</br>
+            We will analyze it for you and tell you the actual domain of the link, it's category, whether it is safe to open or not, has malware, contains spam, is phishing link or is suspicious.
+            You will also get a Risk Score, so that you can decide if you should open it or not. 
+          </p>
+          
+          <form action="{{ url_for('get_details') }}" method="post">
+          <div class="md:flex flex-row">
+            <input
+            id="url_input"
+            name="url"
+              type="text"
+              class="form-control block w-full px-4 py-2 mb-2 md:mb-0 md:mr-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              placeholder="Enter URL/Link"
+            />
+            <button
+                id="submit"
+              type="submit"
+              class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="light"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
